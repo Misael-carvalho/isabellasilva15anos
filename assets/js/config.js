@@ -51,7 +51,7 @@ window.SITE_CONFIG = {
   /* ---------- Integração com Google Sheets ----------
      Cole aqui a URL do Web App do Google Apps Script (veja o README).
      Deixe vazio para o "modo demonstração". */
-  apiUrl: "",
+  apiUrl: "https://script.google.com/macros/s/AKfycbzOvr4RSuxqyEmAl1HcyjRZzaJug8mRvLVJu2C-Zi7RXX7Swnx9viEJutT6PNQbC9YRwA/exec",
 
   /* ---------- Lista de presentes ----------
      categoria: experiencias | moda | tecnologia | casa | cotas
