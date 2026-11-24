@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Isabella Silva · 15 Anos</title>
+  <meta name="description" content="Você está convidado para celebrar os 15 anos de Isabella Silva. Confirme sua presença, veja a lista de presentes e deixe seu recado.">
+  <meta name="theme-color" content="#0b1628">
+
+  <!-- Pré-visualização ao compartilhar no WhatsApp / redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Isabella Silva · 15 Anos">
+  <meta property="og:description" content="Uma noite de sonhos. Confirme sua presença e faça parte deste momento.">
+  <meta property="og:image" content="https://misael-carvalho.github.io/isabellasilva15anos/assets/img/og.jpg">
+  <meta property="og:url" content="https://misael-carvalho.github.io/isabellasilva15anos/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Pinyon+Script&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ================= ABERTURA (envelope) ================= -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <span class="intro__monogram">I</span>
+      <p class="intro__line">Você recebeu um convite especial</p>
+      <button class="btn btn--ghost-light" id="introBtn" type="button">Abrir convite</button>
+    </div>
+  </div>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__brand" aria-label="Início">Isabella <span>15</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="#convite">Convite</a>
+      <a href="#historia">Minha História</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#evento">A Festa</a>
+      <a href="#presentes">Presentes</a>
+      <a href="#recados">Recados</a>
+      <a href="#confirmar" class="nav__cta">Confirmar Presença</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__media">
+        <picture>
+          <source media="(min-width: 1024px) and (min-aspect-ratio: 5/4)" srcset="assets/img/faixa.jpg">
+          <img src="assets/img/hero.jpg" alt="Isabella com vestido azul-marinho e tiara prateada" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="hero__veil"></div>
+      <div class="sparkles" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow reveal">Uma noite de sonhos</p>
+        <h1 class="hero__title reveal">
+          <span class="script" data-cfg="nome">Isabella Silva</span>
+        </h1>
+        <div class="hero__fifteen reveal" aria-label="15 anos">
+          <span class="rule"></span><em>XV</em><span class="rule"></span>
+        </div>
+        <p class="hero__date reveal"><span data-cfg="dataExtenso">Sábado, 20 de março de 2027</span> · <span data-cfg="horario">20h00</span></p>
+
+        <div class="countdown reveal" id="countdown" aria-live="polite">
+          <div><strong data-cd="d">00</strong><span>dias</span></div>
+          <div><strong data-cd="h">00</strong><span>horas</span></div>
+          <div><strong data-cd="m">00</strong><span>minutos</span></div>
+          <div><strong data-cd="s">00</strong><span>segundos</span></div>
+        </div>
+
+        <div class="hero__actions reveal">
+          <a href="#confirmar" class="btn btn--gold">Confirmar presença</a>
+          <a href="#presentes" class="btn btn--ghost-light">Lista de presentes</a>
+        </div>
+      </div>
+      <a href="#convite" class="hero__scroll" aria-label="Rolar para o convite"><span></span></a>
+    </section>
+
+    <!-- ================= CONVITE ================= -->
+    <section class="section section--ivory" id="convite">
+      <div class="container split">
+        <figure class="split__media reveal">
+          <div class="frame">
+            <img src="assets/img/convite.jpg" alt="Isabella sorrindo com o vestido de debutante" loading="lazy">
+          </div>
+        </figure>
+        <div class="split__text reveal">
+          <p class="eyebrow">Com alegria, convidamos</p>
+          <h2 class="title">Para celebrar os meus <em>15 anos</em></h2>
+          <div class="ornament" aria-hidden="true"></div>
+          <p class="lead">
+            Há quinze anos começava uma história escrita com amor, sorrisos e muitos sonhos.
+            Agora chegou o momento de virar a página e celebrar essa nova fase ao lado das
+            pessoas mais importantes da minha vida.
+          </p>
+          <p>
+            Será uma honra contar com a sua presença numa noite preparada com todo o carinho,
+            cheia de música, emoção e memórias que vamos guardar para sempre.
+          </p>
+          <p class="signature script">Isabella</p>
+          <p class="parents">
+            Com a bênção de seus pais<br>
+            <strong>Nome do Pai</strong> &amp; <strong>Nome da Mãe</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FRASE ================= -->
+    <section class="quote">
+      <img src="assets/img/g03.jpg" alt="" class="quote__bg" loading="lazy">
+      <div class="quote__veil"></div>
+      <blockquote class="reveal">
+        <p>“Que os meus sonhos sejam maiores que os meus medos e que cada passo seja guiado pela fé.”</p>
+      </blockquote>
+    </section>
+
+    <!-- ================= HISTÓRIA ================= -->
+    <section class="section section--navy" id="historia">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Quinze anos em capítulos</p>
+          <h2 class="title">Minha História</h2>
+          <div class="ornament ornament--light" aria-hidden="true"></div>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <figure><img src="assets/img/h1.jpg" alt="Isabella pequenininha" loading="lazy"></figure>
+            <div class="timeline__body">
+              <span class="timeline__year">Primeiros anos</span>
+              <h3>Um sorriso que iluminava tudo</h3>
+              <p>Curiosa, falante e cheia de energia — desde cedo a alegria da casa.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <figure><img src="assets/img/h2.jpg" alt="Isabella criança com vestido rosa" loading="lazy"></figure>
+            <div class="timeline__body">
+              <span class="timeline__year">Infância</span>
+              <h3>Vestidos, festas e muita imaginação</h3>
+              <p>Cada data especial era motivo para escolher o look perfeito.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <figure><img src="assets/img/h3.jpg" alt="Isabella com chapéu" loading="lazy"></figure>
+            <div class="timeline__body">
+              <span class="timeline__year">2018</span>
+              <h3>Estilo próprio</h3>
+              <p>Chapéu, pose e personalidade: a fotógrafa da família já sabia o que queria.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <figure><img src="assets/img/h4.jpg" alt="Isabella sorrindo" loading="lazy"></figure>
+            <div class="timeline__body">
+              <span class="timeline__year">2020</span>
+              <h3>Crescendo com o coração cheio</h3>
+              <p>Novos amigos, novas descobertas e o mesmo sorriso de sempre.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <figure><img src="assets/img/h5.jpg" alt="Isabella em 2022" loading="lazy"></figure>
+            <div class="timeline__body">
+              <span class="timeline__year">2022</span>
+              <h3>Sonhos em construção</h3>
+              <p>Aprendendo, sonhando alto e descobrindo quem quer ser.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <figure><img src="assets/img/h6.jpg" alt="Isabella em 2024" loading="lazy"></figure>
+            <div class="timeline__body">
+              <span class="timeline__year">2024</span>
+              <h3>Quase lá</h3>
+              <p>Mais madura, mais confiante e pronta para o próximo capítulo.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <figure><img src="assets/img/retrato.jpg" alt="Isabella com tiara no ensaio de 15 anos" loading="lazy"></figure>
+            <div class="timeline__body">
+              <span class="timeline__year">Hoje</span>
+              <h3>Quinze anos</h3>
+              <p>E a melhor parte da história está só começando. Vem celebrar comigo!</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= GALERIA ================= -->
+    <section class="section section--ivory" id="galeria">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Ensaio de 15 anos</p>
+          <h2 class="title">Galeria</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </header>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- ================= A FESTA ================= -->
+    <section class="section section--navy" id="evento">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Anote na agenda</p>
+          <h2 class="title">A Festa</h2>
+          <div class="ornament ornament--light" aria-hidden="true"></div>
+        </header>
+
+        <div class="event-cards">
+          <article class="card-lux reveal">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="31" rx="2"/><path d="M7 19h34M16 6v8M32 6v8"/><circle cx="24" cy="30" r="1.6"/></svg>
+            <h3>Quando</h3>
+            <p data-cfg="dataExtenso">Sábado, 20 de março de 2027</p>
+            <p class="muted">a partir das <span data-cfg="horario">20h00</span></p>
+            <div class="card-lux__actions">
+              <a class="link-gold" id="gcalLink" target="_blank" rel="noopener">Google Agenda</a>
+              <button class="link-gold" id="icsBtn" type="button">Salvar no celular (.ics)</button>
+            </div>
+          </article>
+
+          <article class="card-lux reveal">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 43s14-12.7 14-24a14 14 0 1 0-28 0c0 11.3 14 24 14 24Z"/><circle cx="24" cy="19" r="5"/></svg>
+            <h3>Onde</h3>
+            <p data-cfg="local.nome">Espaço de Eventos</p>
+            <p class="muted"><span data-cfg="local.endereco"></span><br><span data-cfg="local.cidade"></span></p>
+            <div class="card-lux__actions">
+              <a class="link-gold" id="mapsLink" target="_blank" rel="noopener">Google Maps</a>
+              <a class="link-gold" id="wazeLink" target="_blank" rel="noopener">Waze</a>
+            </div>
+          </article>
+
+          <article class="card-lux reveal">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 6h14l-3 7 6 6-4 23H18l-4-23 6-6-3-7Z"/><path d="M20 13h8"/></svg>
+            <h3>Traje</h3>
+            <p data-cfg="dressCode.titulo">Traje Passeio Completo</p>
+            <p class="muted small" data-cfg="dressCode.descricao"></p>
+            <div class="swatches" id="swatches"></div>
+          </article>
+        </div>
+
+        <div class="map reveal">
+          <iframe id="mapFrame" title="Mapa do local da festa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p class="map__note" data-cfg="local.referencia"></p>
+        </div>
+
+        <h3 class="subtitle reveal">Programação da noite</h3>
+        <ol class="schedule">
+          <li class="reveal"><time>20h00</time><div><strong>Recepção</strong><span>Coquetel de boas-vindas</span></div></li>
+          <li class="reveal"><time>21h00</time><div><strong>Entrada da debutante</strong><span>O momento mais esperado</span></div></li>
+          <li class="reveal"><time>21h20</time><div><strong>Valsa &amp; homenagens</strong><span>Família, padrinhos e os 15 príncipes</span></div></li>
+          <li class="reveal"><time>22h00</time><div><strong>Jantar</strong><span>Menu assinado</span></div></li>
+          <li class="reveal"><time>23h00</time><div><strong>Pista de dança</strong><span>DJ e muita festa</span></div></li>
+          <li class="reveal"><time>01h30</time><div><strong>Bolo &amp; parabéns</strong><span>Brinde ao novo ciclo</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= PRESENTES ================= -->
+    <section class="section section--ivory" id="presentes">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Com carinho</p>
+          <h2 class="title">Lista de Presentes</h2>
+          <div class="ornament" aria-hidden="true"></div>
+          <p class="section__intro">
+            Sua presença é o meu maior presente! Mas, se desejar me presentear, preparei algumas
+            sugestões com muito carinho. O valor é enviado por Pix de forma rápida e segura.
+          </p>
+        </header>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtrar presentes">
+          <button class="chip is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+          <button class="chip" data-filter="experiencias" role="tab" aria-selected="false">Experiências</button>
+          <button class="chip" data-filter="moda" role="tab" aria-selected="false">Moda &amp; Beleza</button>
+          <button class="chip" data-filter="tecnologia" role="tab" aria-selected="false">Tecnologia</button>
+          <button class="chip" data-filter="casa" role="tab" aria-selected="false">Quarto &amp; Livros</button>
+          <button class="chip" data-filter="cotas" role="tab" aria-selected="false">Cotas</button>
+        </div>
+
+        <div class="gifts" id="gifts"></div>
+
+        <aside class="pix-direct reveal">
+          <div>
+            <h3>Prefere enviar direto?</h3>
+            <p>Chave Pix: <strong id="pixKeyText"></strong><br><span class="muted" id="pixBankText"></span></p>
+          </div>
+          <button class="btn btn--navy" type="button" id="copyPixKey">Copiar chave Pix</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= CONFIRMAÇÃO ================= -->
+    <section class="section section--navy rsvp" id="confirmar">
+      <img src="assets/img/g09.jpg" alt="" class="rsvp__bg" loading="lazy">
+      <div class="rsvp__veil"></div>
+      <div class="container narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">R.S.V.P.</p>
+          <h2 class="title">Confirme sua presença</h2>
+          <div class="ornament ornament--light" aria-hidden="true"></div>
+          <p class="section__intro">Por gentileza, confirme até <strong data-cfg="prazoRSVP"></strong>.</p>
+        </header>
+
+        <form class="form glass reveal" id="rsvpForm" novalidate>
+          <div class="form__row">
+            <label class="field">
+              <span>Nome completo *</span>
+              <input name="nome" type="text" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span>WhatsApp *</span>
+              <input name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+            </label>
+          </div>
+
+          <fieldset class="field field--choice">
+            <legend>Você poderá comparecer? *</legend>
+            <label class="radio"><input type="radio" name="presenca" value="Sim" required checked><span>Sim, estarei lá!</span></label>
+            <label class="radio"><input type="radio" name="presenca" value="Não"><span>Infelizmente não poderei</span></label>
+          </fieldset>
+
+          <div class="form__row" data-if-attending>
+            <label class="field">
+              <span>Adultos (incluindo você)</span>
+              <select name="adultos">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Crianças</span>
+              <select name="criancas">
+                <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field" data-if-attending>
+            <span>Nome dos acompanhantes</span>
+            <input name="acompanhantes" type="text" placeholder="Ex.: Maria Souza, João Souza">
+          </label>
+
+          <label class="field" data-if-attending>
+            <span>Restrição alimentar</span>
+            <input name="restricao" type="text" placeholder="Ex.: vegetariano, sem glúten…">
+          </label>
+
+          <label class="field">
+            <span>Mensagem para a Isabella</span>
+            <textarea name="mensagem" rows="3" placeholder="Deixe um carinho (opcional)"></textarea>
+          </label>
+
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button class="btn btn--gold btn--block" type="submit">Enviar confirmação</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= RECADOS ================= -->
+    <section class="section section--ivory" id="recados">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Mural de carinho</p>
+          <h2 class="title">Deixe seu recado</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </header>
+
+        <div class="messages-wrap">
+          <form class="form form--light reveal" id="msgForm" novalidate>
+            <label class="field">
+              <span>Seu nome *</span>
+              <input name="nome" type="text" autocomplete="name" required maxlength="60">
+            </label>
+            <label class="field">
+              <span>Recado *</span>
+              <textarea name="mensagem" rows="4" required maxlength="500" placeholder="Escreva uma mensagem especial…"></textarea>
+            </label>
+            <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn--navy btn--block" type="submit">Publicar recado</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="messages" id="messages" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DÚVIDAS ================= -->
+    <section class="section section--navy" id="duvidas">
+      <div class="container narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">Informações</p>
+          <h2 class="title">Dúvidas frequentes</h2>
+          <div class="ornament ornament--light" aria-hidden="true"></div>
+        </header>
+        <div class="faq">
+          <details class="reveal"><summary>Posso levar acompanhante?</summary><p>O convite é nominal. Na confirmação, informe o nome de todos que estão incluídos no seu convite.</p></details>
+          <details class="reveal"><summary>Crianças são bem-vindas?</summary><p>Sim! Informe a quantidade de crianças no formulário de confirmação para organizarmos tudo com carinho.</p></details>
+          <details class="reveal"><summary>Há estacionamento no local?</summary><p>Sim, o espaço conta com serviço de manobrista.</p></details>
+          <details class="reveal"><summary>Até quando posso confirmar presença?</summary><p>Pedimos a confirmação até <span data-cfg="prazoRSVP"></span>, para que tudo esteja perfeito.</p></details>
+          <details class="reveal"><summary>Como funciona a lista de presentes?</summary><p>Escolha um presente, faça o Pix com o QR Code ou o código copia-e-cola e confirme. Você também pode enviar um valor livre.</p></details>
+          <details class="reveal"><summary>Posso postar fotos da festa?</summary><p>Claro! Use a hashtag <strong data-cfg="hashtag"></strong> para que a Isabella encontre todas as memórias.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="footer">
+    <p class="footer__script script">Isabella</p>
+    <p class="footer__date"><span data-cfg="dataExtenso"></span></p>
+    <p class="footer__tag" data-cfg="hashtag"></p>
+    <p class="footer__contact"><a id="waContact" target="_blank" rel="noopener">Falar com a família pelo WhatsApp</a></p>
+    <p class="footer__copy">Feito com amor · <span data-cfg="contatoNome"></span></p>
+  </footer>
+
+  <!-- ================= MODAL PRESENTE ================= -->
+  <dialog class="modal" id="giftModal" aria-labelledby="giftModalTitle">
+    <button class="modal__close" type="button" data-close aria-label="Fechar">&times;</button>
+    <div class="modal__body">
+      <p class="eyebrow">Presentear com Pix</p>
+      <h3 class="modal__title" id="giftModalTitle"></h3>
+      <p class="modal__desc" id="giftModalDesc"></p>
+
+      <label class="field field--amount" id="amountField" hidden>
+        <span>Valor do presente (R$)</span>
+        <input type="number" min="1" step="1" inputmode="decimal" id="amountInput" placeholder="100">
+      </label>
+
+      <div class="modal__price" id="giftModalPrice"></div>
+
+      <div class="pix">
+        <div class="pix__qr" id="pixQr" aria-label="QR Code Pix"></div>
+        <div class="pix__code">
+          <span class="muted small">Pix copia e cola</span>
+          <textarea id="pixCode" readonly rows="4"></textarea>
+          <button class="btn btn--navy btn--block" type="button" id="copyPixCode">Copiar código</button>
+        </div>
+      </div>
+
+      <form class="form form--light" id="giftForm" novalidate>
+        <p class="small muted">Depois de fazer o Pix, confirme abaixo para a Isabella saber que foi você 💙</p>
+        <label class="field"><span>Seu nome *</span><input name="nome" required maxlength="60" autocomplete="name"></label>
+        <label class="field"><span>Mensagem (opcional)</span><textarea name="mensagem" rows="2" maxlength="300"></textarea></label>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--gold btn--block" type="submit">Já fiz o Pix — confirmar presente</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <button class="lightbox__close" type="button" data-close aria-label="Fechar">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Foto anterior">&#8249;</button>
+    <img id="lightboxImg" alt="">
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Próxima foto">&#8250;</button>
+    <p class="lightbox__count" id="lightboxCount"></p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
