@@ -5,7 +5,9 @@
   "use strict";
 
   const CFG = window.SITE_CONFIG || {};
-  const $ = (s, el = document) => el.querySelector(s);
+  // Se um elemento for removido do HTML, devolve um elemento "vazio" (fora da página)
+  // para que o restante do site continue funcionando normalmente.
+  const $ = (s, el = document) => el.querySelector(s) || document.createElement("div");
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
   const API = (CFG.apiUrl || "").trim();
   const DEMO = !API;
@@ -292,7 +294,7 @@
 
   function renderGifts() {
     const wrap = $("#gifts");
-    const active = ($(".chip.is-active") || {}).dataset?.filter || "todos";
+    const active = $(".chip.is-active").dataset.filter || "todos";
     wrap.innerHTML = "";
     (CFG.presentes || []).forEach((g) => {
       const qty = Math.max(1, Number(g.quantidade) || 1);
