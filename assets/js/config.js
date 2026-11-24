@@ -5,47 +5,47 @@
 window.SITE_CONFIG = {
   /* ---------- Debutante e evento ---------- */
   nome: "Isabella Silva",
-  apelido: "Isa",
+  apelido: "Bella",
   hashtag: "#Isa15Anos",
 
   // Data e hora da festa (formato: AAAA-MM-DDTHH:MM:SS, horário de Brasília)
-  dataEvento: "2027-03-20T20:00:00-03:00",
-  duracaoHoras: 6,
-  dataExtenso: "Sábado, 20 de março de 2027",
-  horario: "20h00",
+  dataEvento: "2026-12-19T10:00:00-03:00",
+  duracaoHoras: 4,
+  dataExtenso: "Sábado, 19 de dezembro de 2026",
+  horario: "19h00",
 
   // Prazo para confirmação de presença
-  prazoRSVP: "20 de fevereiro de 2027",
+  prazoRSVP: "12 de dezembro de 2026",
 
   local: {
-    nome: "Espaço de Eventos Villa Imperial",
-    endereco: "Av. das Palmeiras, 1500 — Jardim Europa",
-    cidade: "São Paulo — SP",
+    nome: "Espaço de Eventos Cerimonial Reis",
+    endereco: "Av. Cláudio Manoel da Costa, 1970 - Interlagos",
+    cidade: "Linhares - ES",
     // Texto usado para busca no mapa (pode ser o endereço completo)
-    busca: "Av. Paulista, 1578, São Paulo - SP",
-    referencia: "Estacionamento com manobrista no local."
+    busca: "https://share.google/SBHMRuYhtEGnOqC2N",
+    referencia: "Estacionamento na rua, frente do local."
   },
 
   dressCode: {
-    titulo: "Traje Passeio Completo",
+    titulo: "Traje",
     descricao:
-      "Vestidos longos ou midi para elas e terno para eles. Pedimos, com carinho, que evitem o azul-marinho e o branco — cores reservadas para a debutante.",
+      "Pedimos, com carinho, que evitem o azul-marinho — cor reservada para a debutante.",
     sugeridas: ["#C9B68A", "#B8A2C8", "#8E9AAF", "#D8B4A0", "#6B7F6A", "#3A3A3A"],
-    evitar: ["#14284B", "#FFFFFF"]
+    evitar: ["#14284B"]
   },
 
   /* ---------- Contato / WhatsApp ----------
      Número com DDI + DDD, só dígitos. Usado como alternativa de confirmação
      enquanto a planilha (Google Sheets) não estiver configurada. */
-  whatsapp: "5511999999999",
-  contatoNome: "Família Silva",
+  whatsapp: "5527996528445",
+  contatoNome: "Fabiana Andrade",
 
   /* ---------- Pix (lista de presentes) ---------- */
   pix: {
-    chave: "isabella15anos@email.com", // CPF, e-mail, telefone (+55...) ou chave aleatória
+    chave: "27997601485", // CPF, e-mail, telefone (+55...) ou chave aleatória
     recebedor: "Isabella Silva",       // até 25 caracteres
-    cidade: "Sao Paulo",                // até 15 caracteres
-    banco: "Banco Exemplo"
+    cidade: "Linhares",                // até 15 caracteres
+    banco: "Picpay"
   },
 
   /* ---------- Integração com Google Sheets ----------
@@ -82,7 +82,7 @@ window.SITE_CONFIG = {
 
   /* ---------- Recados de exemplo (aparecem no modo demonstração) ---------- */
   recadosExemplo: [
-    { nome: "Vovó Maria", mensagem: "Minha princesa, que Deus abençoe cada passo da sua vida. Te amo infinitamente!" },
+    { nome: "Vovó Penha", mensagem: "Minha princesa, que Deus abençoe cada passo da sua vida. Te amo infinitamente!" },
     { nome: "Tia Ana",    mensagem: "Quinze anos de luz, alegria e muito amor. Que essa noite seja mágica como você!" },
     { nome: "Júlia",      mensagem: "Amiga, mal posso esperar para dançar a noite toda com você! ✨" }
   ]
