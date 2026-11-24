@@ -42,7 +42,7 @@ window.SITE_CONFIG = {
 
   /* ---------- Pix (lista de presentes) ---------- */
   pix: {
-    chave: "27997601485", // CPF, e-mail, telefone (+55...) ou chave aleatória
+    chave: "+5527997601485", // CPF, e-mail, telefone (+55 + DDD + número) ou chave aleatória
     recebedor: "Isabella Silva",       // até 25 caracteres
     cidade: "Linhares",                // até 15 caracteres
     banco: "Picpay"

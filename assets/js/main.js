@@ -30,7 +30,7 @@
     toastTimer = setTimeout(() => t.classList.remove("is-show"), 2800);
   }
 
-  async function copy(text, okMsg) {
+  async function copy(text, okMsg, btn) {
     try {
       await navigator.clipboard.writeText(text);
     } catch (e) {
@@ -40,7 +40,38 @@
       try { document.execCommand("copy"); } catch (err) { /* ignorar */ }
       ta.remove();
     }
+    // Se houver uma janela (modal) aberta, o aviso precisa ficar dentro dela para aparecer na frente
+    const t = $("#toast");
+    const openDlg = document.querySelector("dialog[open]");
+    (openDlg || document.body).appendChild(t);
     toast(okMsg || "Copiado!");
+    if (btn) {
+      if (!btn.dataset.label) btn.dataset.label = btn.textContent;
+      btn.textContent = "✓ Copiado!";
+      btn.classList.add("is-copied");
+      clearTimeout(btn._t);
+      btn._t = setTimeout(() => { btn.textContent = btn.dataset.label; btn.classList.remove("is-copied"); }, 2500);
+    }
+  }
+
+  /* Normaliza a chave Pix: telefone sem +55 vira +55..., CPF/CNPJ sem pontuação */
+  function isCPF(c) {
+    if (!/^\d{11}$/.test(c) || /^(\d)\1{10}$/.test(c)) return false;
+    const dv = (n) => { let s = 0; for (let i = 0; i < n; i++) s += +c[i] * (n + 1 - i); const r = (s * 10) % 11; return r === 10 ? 0 : r; };
+    return dv(9) === +c[9] && dv(10) === +c[10];
+  }
+  function pixKey(raw) {
+    const k = String(raw || "").trim();
+    if (!k) return "";
+    if (k.includes("@")) return k.toLowerCase();                       // e-mail
+    if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(k)) return k.toLowerCase(); // aleatória
+    const d = k.replace(/\D/g, "");
+    if (k.startsWith("+")) return "+" + d;                               // telefone já com +55
+    if (d.length === 14) return d;                                       // CNPJ
+    if (d.length === 11 && isCPF(d)) return d;                           // CPF
+    if (d.length === 10 || d.length === 11) return "+55" + d;            // telefone com DDD
+    if (d.length === 13 && d.startsWith("55")) return "+" + d;           // 55 + DDD + número
+    return k;
   }
 
   /* ---------- Preenche textos da configuração ---------- */
@@ -264,7 +295,7 @@
   }
   function pixPayload(amount, txid) {
     const p = CFG.pix || {};
-    const key = String(p.chave || "").trim();
+    const key = pixKey(p.chave);
     let s = emv("00", "01") +
       emv("26", emv("00", "br.gov.bcb.pix") + emv("01", key)) +
       emv("52", "0000") + emv("53", "986") +
@@ -279,7 +310,7 @@
 
   $("#pixKeyText").textContent = (CFG.pix || {}).chave || "";
   $("#pixBankText").textContent = [(CFG.pix || {}).recebedor, (CFG.pix || {}).banco].filter(Boolean).join(" · ");
-  $("#copyPixKey").addEventListener("click", () => copy((CFG.pix || {}).chave, "Chave Pix copiada!"));
+  $("#copyPixKey").addEventListener("click", (e) => copy(pixKey((CFG.pix || {}).chave), "Chave Pix copiada! Cole no app do seu banco.", e.currentTarget));
 
   /* ---------- Lista de presentes ---------- */
   const ICONS = {
@@ -368,9 +399,10 @@
   }
   amountInput.addEventListener("input", updatePix);
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
-  $("#copyPixCode").addEventListener("click", () => {
+  $("#copyPixCode").addEventListener("click", (e) => {
     const v = $("#pixCode").value;
-    if (v) copy(v, "Código Pix copiado! Cole no app do seu banco."); else toast("Informe o valor do presente.");
+    if (v) copy(v, "Código Pix copiado! Agora cole no app do seu banco, na opção Pix Copia e Cola.", e.currentTarget);
+    else { modal.appendChild($("#toast")); toast("Informe o valor do presente."); }
   });
 
   $("#giftForm").addEventListener("submit", async (e) => {

@@ -500,6 +500,7 @@ button { font: inherit; cursor: pointer; }
   width: 100%; resize: none; font-family: ui-monospace, Consolas, monospace; font-size: 11px; line-height: 1.4;
   border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; background: var(--ivory); color: var(--ink); margin: 6px 0 10px;
 }
+.btn.is-copied { background: #2f7d55; color: #fff; }
 .pix.is-empty { opacity: .45; pointer-events: none; }
 @media (max-width: 520px) { .pix { grid-template-columns: 1fr; justify-items: center; } .pix__code { width: 100%; } }
 
@@ -601,7 +602,7 @@ button { font: inherit; cursor: pointer; }
 .toast {
   position: fixed; left: 50%; bottom: 26px; z-index: 200; transform: translate(-50%, 30px);
   background: var(--navy-900); color: var(--ivory); border: 1px solid var(--champagne);
-  padding: 12px 22px; border-radius: 40px; font-size: 13px; opacity: 0; pointer-events: none;
+  padding: 12px 22px; border-radius: 14px; font-size: 13px; line-height: 1.5; opacity: 0; pointer-events: none; width: max-content;
   transition: all .4s var(--ease); max-width: calc(100vw - 32px); text-align: center;
 }
 .toast.is-show { opacity: 1; transform: translate(-50%, 0); }
