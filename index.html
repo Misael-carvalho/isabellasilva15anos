@@ -279,9 +279,24 @@
           <div class="ornament" aria-hidden="true"></div>
           <p class="section__intro">
             Sua presença é o meu maior presente! Mas, se desejar me presentear, preparei algumas
-            sugestões com muito carinho. O valor é enviado por Pix de forma rápida e segura.
+            sugestões com muito carinho — você pode escolher um presente físico ou enviar por Pix.
           </p>
         </header>
+
+        <!-- Presentes físicos: tamanhos e sugestões (edite em assets/js/config.js -> presentesFisicos) -->
+        <div class="physical reveal" id="physical">
+          <div class="physical__head">
+            <p class="eyebrow">Presentes físicos</p>
+            <h3>Meus tamanhos</h3>
+          </div>
+          <div class="sizes" id="sizes"></div>
+          <div class="physical__sugg">
+            <h4>Lista de sugestões</h4>
+            <ul class="sugg" id="suggestions"></ul>
+          </div>
+        </div>
+
+        <div class="divider-label reveal"><span>ou presenteie com Pix</span></div>
 
         <div class="filters reveal" role="tablist" aria-label="Filtrar presentes">
           <button class="chip is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>

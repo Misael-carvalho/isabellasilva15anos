@@ -312,6 +312,13 @@
   $("#pixBankText").textContent = [(CFG.pix || {}).recebedor, (CFG.pix || {}).banco].filter(Boolean).join(" · ");
   $("#copyPixKey").addEventListener("click", (e) => copy(pixKey((CFG.pix || {}).chave), "Chave Pix copiada! Cole no app do seu banco.", e.currentTarget));
 
+  /* ---------- Presentes físicos ---------- */
+  const pf = CFG.presentesFisicos || {};
+  $("#sizes").innerHTML = (pf.tamanhos || []).map((t) =>
+    `<div class="size"><span class="size__item">${esc(t.item)}</span><strong class="size__val">${esc(t.tamanho)}</strong></div>`).join("");
+  $("#suggestions").innerHTML = (pf.sugestoes || []).map((s) => `<li>${esc(s)}</li>`).join("");
+  if (!(pf.tamanhos || []).length && !(pf.sugestoes || []).length) $("#physical").hidden = true;
+
   /* ---------- Lista de presentes ---------- */
   const ICONS = {
     experiencias: '<svg viewBox="0 0 48 48"><path d="M6 30 42 12l-6 24-10-6-6 8v-10l16-12"/></svg>',

@@ -57,6 +57,23 @@ window.SITE_CONFIG = {
      categoria: experiencias | moda | tecnologia | casa | cotas
      quantidade: quantas pessoas podem dar esse presente (cotas = várias)
      link: opcional — loja para quem preferir comprar o produto */
+  /* ---------- Presentes físicos (aparece antes da lista de Pix) ---------- */
+  presentesFisicos: {
+    tamanhos: [
+      { item: "Blusa",    tamanho: "M"  },
+      { item: "Calça",    tamanho: "42" },
+      { item: "Calçados", tamanho: "39" }
+    ],
+    sugestoes: [
+      "Roupas e acessórios",
+      "Perfumes",
+      "Maquiagens e skincare",
+      "Joias",
+      "Bolsas pequenas",
+      "Vale-presente"
+    ]
+  },
+
   presentes: [
     { id: "livre",       categoria: "cotas", nome: "Presente com Valor Livre", descricao: "Escolha o valor que desejar presentear.",       valor: 0,   quantidade: 999 },
     
