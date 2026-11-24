@@ -181,6 +181,21 @@
   if ((dc.evitar || []).length) { const sep = document.createElement("span"); sep.className = "sep"; sw.appendChild(sep); }
   (dc.evitar || []).forEach((c) => { const i = document.createElement("i"); i.style.background = c; i.className = "is-avoid"; i.title = "Evitar"; sw.appendChild(i); });
 
+  /* ---------- Mural "Era uma vez" (fotos de bebê) ---------- */
+  const babyWall = $("#babyWall");
+  if (babyWall) {
+    const total = Number(babyWall.dataset.total) || 0;
+    const tilts = [-4, 3, -2, 5, -5, 2, -3, 4, -1, 3];
+    for (let i = 1; i <= total; i++) {
+      const n = String(i).padStart(2, "0");
+      const fig = document.createElement("figure");
+      fig.className = "polaroid";
+      fig.style.setProperty("--r", tilts[(i - 1) % tilts.length] + "deg");
+      fig.innerHTML = `<img src="assets/img/pequena/p${n}.jpg" alt="Isabella bebê — foto ${i}" loading="lazy" width="180" height="180">`;
+      babyWall.appendChild(fig);
+    }
+  }
+
   /* ---------- Galeria + lightbox ---------- */
   const photos = Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, "0"));
   const gal = $("#gallery");
@@ -431,7 +446,6 @@
       tipo: "rsvp", nome, telefone, presenca: rsvp.presenca.value,
       adultos: yes ? rsvp.adultos.value : "0", criancas: yes ? rsvp.criancas.value : "0",
       acompanhantes: yes ? rsvp.acompanhantes.value.trim() : "",
-      restricao: yes ? rsvp.restricao.value.trim() : "",
       mensagem: rsvp.mensagem.value.trim()
     };
     const btn = $("button[type=submit]", rsvp);
@@ -447,7 +461,6 @@
         if (yes) {
           lines.push(`Adultos: ${data.adultos}`, `Crianças: ${data.criancas}`);
           if (data.acompanhantes) lines.push(`Acompanhantes: ${data.acompanhantes}`);
-          if (data.restricao) lines.push(`Restrição alimentar: ${data.restricao}`);
         }
         if (data.mensagem) lines.push("", `Mensagem: ${data.mensagem}`);
         window.open(wa(lines.join("\n")), "_blank", "noopener");

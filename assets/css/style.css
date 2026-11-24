@@ -293,6 +293,31 @@ button { font: inherit; cursor: pointer; }
 .quote blockquote::before { content: "“"; display: block; font-family: var(--serif); font-size: 120px; line-height: .6; color: var(--champagne); opacity: .8; }
 .quote p { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(24px, 3.6vw, 40px); line-height: 1.35; margin: 0; }
 
+/* ---------- Era uma vez (fotos de bebê) ---------- */
+.baby { text-align: center; margin: -10px auto 110px; }
+.baby__script { font-size: clamp(44px, 6vw, 64px); color: var(--champagne); margin: 0; line-height: 1.1; }
+.baby__text { font-family: var(--serif); font-style: italic; font-size: 20px; color: rgba(248,245,239,.75); margin: 4px auto 44px; max-width: 520px; }
+.baby-wall { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px 18px; max-width: 1080px; margin: 0 auto; }
+.polaroid {
+  margin: 0; width: 132px; padding: 8px 8px 26px; background: #fbf8f2;
+  box-shadow: 0 14px 28px -14px rgba(0,0,0,.7), 0 0 0 1px rgba(201,182,138,.25);
+  transform: rotate(var(--r, 0deg));
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+  position: relative;
+}
+.polaroid::before {
+  content: ""; position: absolute; top: -8px; left: 50%; width: 44px; height: 16px; margin-left: -22px;
+  background: rgba(227, 213, 180, .55); transform: rotate(calc(var(--r, 0deg) * -1.5));
+}
+.polaroid img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; filter: sepia(.12) saturate(.95); }
+.polaroid:hover { transform: rotate(0deg) scale(1.12); z-index: 2; box-shadow: 0 24px 40px -14px rgba(0,0,0,.8); }
+@media (max-width: 600px) {
+  .baby { margin-bottom: 80px; }
+  .baby-wall { gap: 14px 10px; }
+  .polaroid { width: calc((100% - 30px) / 3); padding: 5px 5px 16px; }
+  .polaroid::before { width: 30px; height: 11px; margin-left: -15px; top: -6px; }
+}
+
 /* ---------- Linha do tempo ---------- */
 .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
 .timeline::before {

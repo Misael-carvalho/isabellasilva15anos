@@ -14,7 +14,7 @@
 const MODERAR_RECADOS = false;
 
 const ABAS = {
-  rsvp:     { nome: 'Confirmações', colunas: ['Data', 'Nome', 'WhatsApp', 'Presença', 'Adultos', 'Crianças', 'Acompanhantes', 'Restrição alimentar', 'Mensagem'] },
+  rsvp:     { nome: 'Confirmações', colunas: ['Data', 'Nome', 'WhatsApp', 'Presença', 'Adultos', 'Crianças', 'Acompanhantes', 'Mensagem'] },
   presente: { nome: 'Presentes',    colunas: ['Data', 'ID', 'Presente', 'Valor (R$)', 'Nome', 'Mensagem', 'Pix recebido?'] },
   recado:   { nome: 'Recados',      colunas: ['Data', 'Nome', 'Recado', 'Aprovado'] }
 };
@@ -91,7 +91,7 @@ function doPost(e) {
     if (d.tipo === 'rsvp') {
       if (!d.nome) return json_({ ok: false, erro: 'Nome obrigatório' });
       sh.appendRow([agora, txt_(d.nome, 100), txt_(d.telefone, 30), txt_(d.presenca, 10), txt_(d.adultos, 3),
-        txt_(d.criancas, 3), txt_(d.acompanhantes, 300), txt_(d.restricao, 200), txt_(d.mensagem, 500)]);
+        txt_(d.criancas, 3), txt_(d.acompanhantes, 300), txt_(d.mensagem, 500)]);
     } else if (d.tipo === 'presente') {
       if (!d.nome || !d.id) return json_({ ok: false, erro: 'Dados incompletos' });
       sh.appendRow([agora, txt_(d.id, 40), txt_(d.presente, 100), Number(d.valor) || 0, txt_(d.nome, 100), txt_(d.mensagem, 300), '']);
