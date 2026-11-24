@@ -58,26 +58,22 @@ window.SITE_CONFIG = {
      quantidade: quantas pessoas podem dar esse presente (cotas = várias)
      link: opcional — loja para quem preferir comprar o produto */
   presentes: [
-    { id: "viagem",      categoria: "experiencias", nome: "Cota da Viagem dos Sonhos", descricao: "Uma contribuição para a primeira grande viagem da Isa.", valor: 150, quantidade: 30 },
-    { id: "spa",         categoria: "experiencias", nome: "Dia de Princesa no Spa",   descricao: "Massagem, cabelo e unhas para um dia inesquecível.",  valor: 350, quantidade: 1 },
-    { id: "show",        categoria: "experiencias", nome: "Ingresso para Show",       descricao: "Para cantar junto com o artista favorito.",          valor: 280, quantidade: 2 },
-    { id: "curso",       categoria: "experiencias", nome: "Curso de Idiomas",         descricao: "Um mês de aulas para abrir as portas do mundo.",      valor: 420, quantidade: 2 },
+    { id: "livre",       categoria: "cotas", nome: "Presente com Valor Livre", descricao: "Escolha o valor que desejar presentear.",       valor: 0,   quantidade: 999 },
+    
+    { id: "viagem",      categoria: "experiencias", nome: "Cota da Viagem dos Sonhos", descricao: "Uma contribuição para a primeira grande viagem da Isa.", valor: 100, quantidade: 30 },
+    { id: "spa",         categoria: "experiencias", nome: "Dia de Princesa no Spa",   descricao: "Massagem, cabelo e unhas para um dia inesquecível.",  valor: 150, quantidade: 1 },
+    { id: "curso",       categoria: "experiencias", nome: "Curso de Idiomas",         descricao: "Um mês de aulas para abrir as portas do mundo.",      valor: 120, quantidade: 1 },
 
-    { id: "perfume",     categoria: "moda", nome: "Perfume Importado",       descricao: "Uma fragrância marcante para a nova fase.",      valor: 450, quantidade: 1 },
-    { id: "joia",        categoria: "moda", nome: "Colar de Prata 925",      descricao: "Uma joia delicada para guardar este momento.",   valor: 320, quantidade: 1 },
-    { id: "skincare",    categoria: "moda", nome: "Kit Skincare Completo",   descricao: "Cuidados diários com muito carinho.",            valor: 260, quantidade: 1 },
-    { id: "bolsa",       categoria: "moda", nome: "Bolsa de Festa",          descricao: "Para acompanhar os próximos grandes eventos.",   valor: 380, quantidade: 1 },
+    { id: "perfume",     categoria: "moda", nome: "Perfume",       descricao: "Uma fragrância marcante para a nova fase.",      valor: 88, quantidade: 1 },
+    { id: "joia",        categoria: "moda", nome: "Colar",      descricao: "Uma joia delicada para guardar este momento.",   valor: 110, quantidade: 1 },
+    { id: "skincare",    categoria: "moda", nome: "Kit Skincare Completo",   descricao: "Cuidados diários com muito carinho.",            valor: 155, quantidade: 1 },
+    { id: "bolsa",       categoria: "moda", nome: "Bolsa de Festa",          descricao: "Para acompanhar os próximos grandes eventos.",   valor: 143, quantidade: 1 },
     { id: "maquiagem",   categoria: "moda", nome: "Paleta de Maquiagem",     descricao: "Cores para todos os momentos.",                  valor: 190, quantidade: 1 },
 
-    { id: "fone",        categoria: "tecnologia", nome: "Fone Bluetooth",        descricao: "Música em alta qualidade, em qualquer lugar.", valor: 400, quantidade: 1 },
-    { id: "camera",      categoria: "tecnologia", nome: "Câmera Instantânea",    descricao: "Para registrar memórias em papel.",            valor: 550, quantidade: 1 },
-    { id: "smartwatch",  categoria: "tecnologia", nome: "Smartwatch",            descricao: "Estilo e praticidade no pulso.",               valor: 700, quantidade: 1 },
-    { id: "celular",     categoria: "cotas",      nome: "Cota do Celular Novo",  descricao: "Ajude a Isa a conquistar o celular novo.",     valor: 100, quantidade: 40 },
+    { id: "celular",     categoria: "cotas",      nome: "Cota do Celular Novo",  descricao: "Ajude a Isa a conquistar o celular novo.",     valor: 99, quantidade: 16 },
 
-    { id: "quarto",      categoria: "casa", nome: "Decoração do Quarto",     descricao: "Um cantinho novo, com a cara dos 15 anos.",       valor: 300, quantidade: 3 },
-    { id: "livros",      categoria: "casa", nome: "Coleção de Livros",       descricao: "Histórias para sonhar acordada.",                 valor: 180, quantidade: 2 },
+    { id: "livros",      categoria: "casa", nome: "Coleção de Livros",       descricao: "Histórias para sonhar acordada.",               valor: 180, quantidade: 2 },
 
-    { id: "livre",       categoria: "cotas", nome: "Presente com Valor Livre", descricao: "Escolha o valor que desejar presentear.",       valor: 0,   quantidade: 999 }
   ],
 
   /* ---------- Recados de exemplo (aparecem no modo demonstração) ---------- */
