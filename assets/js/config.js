@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
     endereco: "Av. Cláudio Manoel da Costa, 1970 - Interlagos",
     cidade: "Linhares - ES",
     // Texto usado para busca no mapa (pode ser o endereço completo)
-    busca: "https://share.google/SBHMRuYhtEGnOqC2N",
+    busca: "https://maps.app.goo.gl/ubse2PBLt4W7fDoB9",
     referencia: "Estacionamento na rua, frente do local."
   },
 
